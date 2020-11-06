@@ -56,7 +56,7 @@ function App() {
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
-              <li>
+              <li key={rune}>
                 <h4>
                   {(idx === 0 && 'overview') ||
                     (idx === 1 && 'challenge') ||
