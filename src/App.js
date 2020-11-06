@@ -70,7 +70,7 @@ function App() {
           })}
       </ul>
       <button type="button" onClick={generateRunes}>
-        Click for Runes
+        Click for a Reading
       </button>
     </div>
   );

@@ -5,9 +5,6 @@
         "jest": true,
         "commonjs": true
     }, 
-    "extends": [
-        "prettier"
-    ],
     "rules": {
         "camelcase": "off",
         "no-use-before-define": "off",
