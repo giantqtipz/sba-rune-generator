@@ -4,9 +4,9 @@
     "node": true,
         "jest": true,
         "commonjs": true
-    },
+    }, 
     "extends": [
-        "plugin:prettier/recommended"
+        "prettier"
     ],
     "rules": {
         "camelcase": "off",
@@ -31,5 +31,5 @@
         "ecmaVersion": 2015
     },
     "parser": "babel-eslint",
-    "plugins": ["react"]
+    "plugins": ["prettier"]
 }
