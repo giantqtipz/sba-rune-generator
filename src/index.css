@@ -1,5 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
   margin: 0;
 }
 
@@ -64,6 +65,9 @@ button:hover {
   }
   li {
     max-width: 300px;
+  }
+  li img {
+    max-height: 300px;
   }
   ul li p {
     height: 120px;
