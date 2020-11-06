@@ -26,30 +26,23 @@ function App() {
         <p>
           In Norse lore, the god, Odin, impaled his heart with his own spear and
           hung on the world tree, Yggdrasil, for nine days and nights all to
-          perceive the meaning of the runes.
+          perceive the meaning of the runes. Odin made his sacrifice because he
+          knew that the runes conveyed deep meaning, and if he could understand
+          their meaning he would gain profound wisdom and power.
         </p>
-
+        <h2>Instructions</h2>
         <p>
-          Odin made his sacrifice because he knew that the runes conveyed deep
-          meaning, and if he could understand their meaning he would gain
-          profound wisdom and power.
+          With a specific issue in mind, press the button to draw three random
+          Runes. Reading from the left, the first Rune represents the Overview
+          of the situation, the center rune identifies the Challenge at hand,
+          and the last rune indicates the course of Action required.
         </p>
+      </div>
 
-        <p>
-          The three Rune reading is the most common reading and satisfactory for
-          most situations. With a specific issue in mind, press the button to
-          draw three random Runes. Reading from the right, the first Rune
-          represents the Overview of the situation, the center rune identifies
-          the Challenge at hand, and the last rune indicates the course of
-          Action required.
-        </p>
-
-        <p>
-          Of course, the meaning of each Rune and how it corresponds to the
-          reading is up to your own interpretation- which is what makes this
-          activity a great accompiant to a glass of bubbles or a Viking inspired
-          Aquavit cocktail!
-        </p>
+      <div className="reading">
+        <button type="button" onClick={generateRunes}>
+          Click for a Reading
+        </button>
       </div>
 
       <ul>
@@ -69,9 +62,6 @@ function App() {
             );
           })}
       </ul>
-      <button type="button" onClick={generateRunes}>
-        Click for a Reading
-      </button>
     </div>
   );
 }

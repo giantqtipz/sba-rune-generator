@@ -4,7 +4,8 @@
     "node": true,
         "jest": true,
         "commonjs": true
-    }, 
+    },
+    "extends": ["react-app", "plugin:prettier/recommended"],
     "rules": {
         "camelcase": "off",
         "no-use-before-define": "off",
