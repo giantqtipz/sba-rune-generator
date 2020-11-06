@@ -6,7 +6,6 @@
         "commonjs": true
     },
     "extends": [
-        "airbnb",
         "plugin:prettier/recommended"
     ],
     "rules": {
@@ -28,7 +27,9 @@
         "react/prop-types": 0
     },
     "parserOptions": {
-        "sourceType": "module"
+        "sourceType": "module",
+        "ecmaVersion": 2015
     },
+    "parser": "babel-eslint",
     "plugins": ["react"]
 }
