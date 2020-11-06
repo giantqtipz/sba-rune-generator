@@ -7,8 +7,9 @@
         "commonjs": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "plugin:prettier/recommended"
+        "airbnb",
+        "plugin:prettier/recommended",
+        "eslint:recommended"
     ],
     "rules": {
         "camelcase": "off",
