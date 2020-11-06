@@ -30,7 +30,7 @@ function App() {
           knew that the runes conveyed deep meaning, and if he could understand
           their meaning he would gain profound wisdom and power.
         </p>
-        <h2>Instructions</h2>
+        <h3>Instructions</h3>
         <p>
           With a specific issue in mind, press the button to draw three random
           Runes. Reading from the left, the first Rune represents the Overview
@@ -50,13 +50,13 @@ function App() {
           randomRunes.map((rune, idx) => {
             return (
               <li key={rune}>
-                <h4>
+                <h5>
                   {(idx === 0 && 'overview') ||
                     (idx === 1 && 'challenge') ||
                     (idx === 2 && 'action')}
-                </h4>
+                </h5>
                 <img src={rune.src} alt="rune" />
-                <h5>{rune.header}</h5>
+                <h4>{rune.header}</h4>
                 <p>{rune.text}</p>
               </li>
             );
