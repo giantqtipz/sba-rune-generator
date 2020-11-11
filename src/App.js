@@ -94,7 +94,6 @@ function App() {
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
-              <>
                 <li key={uuid()}>
                   <h5>
                     {(idx === 0 && 'action') ||
@@ -104,9 +103,8 @@ function App() {
                   <img src={rune.src} alt="rune" />
                   <h4>{rune.header}</h4>
                   <p>{rune.text}</p>
+                  <hr />
                 </li>
-                <hr />
-              </>
             );
           })}
       </ul>}

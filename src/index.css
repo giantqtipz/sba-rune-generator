@@ -55,6 +55,10 @@ li p {
   line-height: 19.36px;
 }
 
+hr {
+  margin-top: 2.6rem;
+}
+
 .show {
   opacity: 1;
   transition: opacity .5s ease-in;
