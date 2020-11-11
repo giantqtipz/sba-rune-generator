@@ -101,6 +101,7 @@ button {
   border-radius: 3px;
   color: white;
   cursor: pointer;
+  font-family: proxima-nova;
   font-size: .9rem;
   font-weight: bold;
   letter-spacing: 0.085rem;
