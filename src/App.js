@@ -6,65 +6,56 @@ import './index.css';
 function App() {
   const [runes] = useState(defaultRunes);
   const [show, setShow] = useState(false);
-  const runesListRef = useRef(null)
-
-  const [randomRunes, setRandomRunes] = useState([
-    runes[0],
-    runes[1],
-    runes[2],
-  ]);
+  const [randomRunes, setRandomRunes] = useState([]);
+  const runesListRef = useRef(null);
 
   const generateRunes = () => {
     const updatedRandomRunes = [];
-    if(show === false) {
-      setShow(true);
-    }
+    if(show === false) setShow(true);
+    show && runesListRef.current.scrollIntoView({ behavior: "smooth" });
     while (updatedRandomRunes.length < 3) {
       const randomRune = runes[Math.floor(Math.random() * runes.length)];;
       if (!updatedRandomRunes.includes(randomRune))
       updatedRandomRunes.push(randomRune);
-    }
-    show && runesListRef.current.scrollIntoView(
-      {
-        behavior: "smooth",
-      }
-    );
+    };
+    setRandomRunes(updatedRandomRunes);
     hideRunes(updatedRandomRunes);
   };
   
   const hideRunes = (randomRunes) => {
-    const runesEl = document.querySelectorAll('li');
+    const runes = document.querySelectorAll('li');
     let timeout = 0;
-    runesEl.forEach((rune, idx) => {
+    runes.forEach((rune, idx) => {
       timeout = timeout + 150;
       setTimeout(() => {
         rune.classList.remove('show');
         if(idx === randomRunes.length - 1) {
           setTimeout(() => {
             setRandomRunes(randomRunes);
-            showRunes();
+            showRunes(rune);
           }, 500);
         }
       }, timeout);
     })
   }
 
-  const showRunes = () => {
-    const runes = document.querySelectorAll('li');
+  const showRunes = (rune) => {
     let timeout = 0;
-    runes.forEach(rune => {
-      timeout = timeout + 125;
+    timeout = timeout + 150;
       setTimeout(() => {
         rune.classList.add('show');
       }, timeout);
-    });    
   }
   useEffect(() => {
+    const runes = document.querySelectorAll('li');
     show && runesListRef.current.scrollIntoView(
       {
         behavior: "smooth",
       }
     );
+    runes.forEach(rune => {
+      showRunes(rune);
+    });
   }, [show, randomRunes]);
   return (
     <div className="main">
@@ -91,15 +82,15 @@ function App() {
         </button>
       </div>
 
-      <ul ref={runesListRef}>
+      {show && <ul ref={runesListRef}>
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
               <li key={uuid()}>
                 <h5>
-                  {(idx === 0 && 'overview') ||
+                  {(idx === 0 && 'action') ||
                     (idx === 1 && 'challenge') ||
-                    (idx === 2 && 'action')}
+                    (idx === 2 && 'overview')}
                 </h5>
                 <img src={rune.src} alt="rune" />
                 <h4>{rune.header}</h4>
@@ -107,7 +98,7 @@ function App() {
               </li>
             );
           })}
-      </ul>
+      </ul>}
     </div>
   );
 }
