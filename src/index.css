@@ -30,7 +30,7 @@ body {
 
 h2 {
   font-family: proxima-nova;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin-top: 2rem;
   text-align: center;
@@ -51,6 +51,7 @@ li {
 }
 
 li p {
+  font-size: .9rem;
   line-height: 19.36px;
 }
 
@@ -67,14 +68,13 @@ p {
 
 h4 {
   font-family: "Cormorant Garamond";
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: normal;
-  margin-bottom: 3rem;
 }
 
 h5 {
   font-family: proxima-nova;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: bold;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -97,10 +97,12 @@ button {
   cursor: pointer;
   font-size: .9rem;
   font-weight: bold;
-  height: 37px;
+  letter-spacing: 0.085rem;
+  line-height: 15px;
   outline: none;
+  padding: .8rem;
   text-transform: uppercase;
-  width: 237px;
+  width: 261px;
 }
 
 button:hover {
@@ -134,9 +136,6 @@ button:active {
   }
   p {
     font-size: 1rem;
-  }
-  h4 {
-    margin-bottom: 1rem;
   }
   hr {
     display: none;
