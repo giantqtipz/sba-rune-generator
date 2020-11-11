@@ -120,4 +120,7 @@ button:active {
   h4 {
     margin-bottom: 1rem;
   }
+  hr {
+    display: none;
+  }
 }
