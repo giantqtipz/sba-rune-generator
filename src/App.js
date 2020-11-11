@@ -70,18 +70,16 @@ function App() {
     <div className="main">
       <div className="intro">
         <p>
-          In Norse lore, the god, Odin, impaled his heart with his own spear and
-          hung on the world tree, Yggdrasil, for nine days and nights all to
-          perceive the meaning of the runes. Odin made his sacrifice because he
-          knew that the runes conveyed deep meaning, and if he could understand
-          their meaning he would gain profound wisdom and power.
+          In Norse lore, the god, Odin, impaled his heart with his own spear and hung on the world tree, 
+          Yggdrasil, for nine days and nights all to perceive the meaning of the runes. 
+          Odin made his sacrifice because he knew that the runes conveyed deep meaning, 
+          and if he could understand their meaning he would gain profound wisdom and power.
         </p>
         <h2>Instructions</h2>
         <p>
-          With a specific issue in mind, press the button to draw three random
-          Runes. Reading from the left, the first Rune represents the Overview
-          of the situation, the center rune identifies the Challenge at hand,
-          and the last rune indicates the course of Action required.
+          With a specific issue in mind, press the button to draw three random Runes. 
+          Reading from the <i>right</i>, the first Rune represents the Overview of the situation, 
+          the center rune identifies the Challenge at hand, and the last rune indicates the course of Action required.         
         </p>
       </div>
 
