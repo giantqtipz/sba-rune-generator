@@ -1,22 +1,37 @@
 body {
+  background-color: #E5E5E5;
   height: 100vh;
   margin: 0;
+}
+
+#root {
+  font-family: "Proxima Nova";
+  padding: 40px;
 }
 
 .main {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 10px 20px;
 }
 
 .header {
-  background-color: lightgray;
-  height: 60px;
-  margin-bottom: 2rem;
+  text-align: center;
 }
 
-h3 {
-  font-family: "Cormorant Garamond";
+.header img {
+  text-align: center;
+  height: 50px;
+}
+
+.intro {
+  line-height: 26px;
+  margin: 1.6rem 0;
+}
+
+h2 {
+  font-family: proxima-nova;
+  font-size: 1.2rem;
+  font-weight: bold;
   margin-top: 2rem;
   text-align: center;
 }
@@ -35,14 +50,17 @@ li {
   width: 100%;
 }
 
+li p {
+  line-height: 19.36px;
+}
+
 .show {
   opacity: 1;
   transition: opacity .5s ease-in;
 }
 
 p {
-  font-family: "Proxima Nova";
-  line-height: 1.8rem;
+  font-family: proxima-nova;
   padding: 0 1rem;
   text-align: center;
 }
@@ -55,7 +73,7 @@ h4 {
 }
 
 h5 {
-  font-family: "Cormorant Garamond";
+  font-family: proxima-nova;
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -63,26 +81,26 @@ h5 {
 }
 
 img {
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  max-width: 200px;
+  max-width: 145px;
   width: 100%;
 }
 
 .reading {
-  margin: 3rem 0;
   text-align: center;
 }
 
 button {
-  background-color: lightgray;
+  background-color: #B6B405;
   border: none;
-  border-radius: 50px;
+  border-radius: 3px;
+  color: white;
   cursor: pointer;
   font-size: .9rem;
   font-weight: bold;
+  height: 37px;
   outline: none;
-  padding: 1rem;
+  text-transform: uppercase;
+  width: 237px;
 }
 
 button:hover {
@@ -96,11 +114,11 @@ button:active {
 
 @media only screen and (min-width: 600px) {
   .intro p {
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding: 0 8rem;
   }
   .reading {
-    margin: 2rem 0 0 0;
+    margin-top: 2.2rem;
   }
   ul {
     display: flex;

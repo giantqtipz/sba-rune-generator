@@ -76,7 +76,7 @@ function App() {
           knew that the runes conveyed deep meaning, and if he could understand
           their meaning he would gain profound wisdom and power.
         </p>
-        <h3>Instructions</h3>
+        <h2>Instructions</h2>
         <p>
           With a specific issue in mind, press the button to draw three random
           Runes. Reading from the left, the first Rune represents the Overview
@@ -87,7 +87,7 @@ function App() {
 
       <div className="reading">
         <button type="button" onClick={generateRunes}>
-          Click for a Reading
+          generate reading
         </button>
       </div>
 
