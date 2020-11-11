@@ -7,7 +7,7 @@ import './index.css';
 ReactDOM.render(
   <React.StrictMode>
     <div className="header">
-      <a href="www.sba-nyc.com">
+      <a href="http://www.sba-nyc.com" target="_blank">
         <img src={Logo} alt="SBA Logo"/>
       </a>
     </div>
