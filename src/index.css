@@ -126,6 +126,7 @@ button:active {
   }
   ul {
     display: flex;
+    height: 500px;
     justify-content: space-between;
     margin-top: 0;
   }
