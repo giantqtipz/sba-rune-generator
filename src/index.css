@@ -24,7 +24,7 @@ body {
 }
 
 .intro {
-  line-height: 27px;
+  line-height: 26px;
   margin: 2rem 0;
 }
 
@@ -53,10 +53,6 @@ li {
 li p {
   font-size: .9rem;
   line-height: 19.36px;
-}
-
-hr {
-  margin-top: 2.6rem;
 }
 
 .show {
@@ -132,8 +128,6 @@ button:active {
     display: flex;
     justify-content: space-between;
     margin-top: 0;
-    height: 500px;
-    overflow: scroll;
   }
   li {
     max-width: 300px;
