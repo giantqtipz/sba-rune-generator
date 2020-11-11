@@ -32,6 +32,7 @@ h2 {
   font-family: proxima-nova;
   font-size: 1.1rem;
   font-weight: bold;
+  margin-bottom: 0;
   margin-top: 2rem;
   text-align: center;
 }
@@ -63,6 +64,7 @@ li p {
 p {
   font-family: proxima-nova;
   padding: 0 1rem;
+  margin: 0;
   text-align: center;
 }
 
@@ -70,6 +72,7 @@ h4 {
   font-family: "Cormorant Garamond";
   font-size: 1.5rem;
   font-weight: normal;
+  margin: 1rem 0;
 }
 
 h5 {

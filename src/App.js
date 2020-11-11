@@ -87,7 +87,7 @@ function App() {
 
       <div className="reading">
         <button type="button" onClick={generateRunes}>
-          generate reading
+          start your reading
         </button>
       </div>
 
