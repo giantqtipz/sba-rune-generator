@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { defaultRunes } from './defaultRunes';
+import { v4 as uuid } from 'uuid';
 import './index.css';
 
 function App() {
   const [runes] = useState(defaultRunes);
+  const [show, setShow] = useState(false);
+  const runesListRef = useRef(null)
 
   const [randomRunes, setRandomRunes] = useState([
     runes[0],
@@ -13,13 +16,56 @@ function App() {
 
   const generateRunes = () => {
     const updatedRandomRunes = [];
-    while (updatedRandomRunes.length < 3) {
-      const randomRune = runes[Math.floor(Math.random() * runes.length)];
-      if (!updatedRandomRunes.includes(randomRune))
-        updatedRandomRunes.push(randomRune);
+    if(show === false) {
+      setShow(true);
     }
-    setRandomRunes(updatedRandomRunes);
+    while (updatedRandomRunes.length < 3) {
+      const randomRune = runes[Math.floor(Math.random() * runes.length)];;
+      if (!updatedRandomRunes.includes(randomRune))
+      updatedRandomRunes.push(randomRune);
+    }
+    show && runesListRef.current.scrollIntoView(
+      {
+        behavior: "smooth",
+      }
+    );
+    hideRunes(updatedRandomRunes);
   };
+  
+  const hideRunes = (randomRunes) => {
+    const runesEl = document.querySelectorAll('li');
+    let timeout = 0;
+    runesEl.forEach((rune, idx) => {
+      timeout = timeout + 150;
+      setTimeout(() => {
+        rune.classList.remove('show');
+        if(idx === randomRunes.length - 1) {
+          setTimeout(() => {
+            setRandomRunes(randomRunes);
+            showRunes();
+          }, 500);
+        }
+      }, timeout);
+    })
+  }
+
+  const showRunes = () => {
+    const runes = document.querySelectorAll('li');
+    let timeout = 0;
+    runes.forEach(rune => {
+      timeout = timeout + 125;
+      setTimeout(() => {
+        rune.classList.add('show');
+      }, timeout);
+    });    
+  }
+  useEffect(() => {
+    show && runesListRef.current.scrollIntoView(
+      {
+        behavior: "smooth",
+      }
+    );
+  }, [show, randomRunes]);
   return (
     <div className="main">
       <div className="intro">
@@ -45,11 +91,11 @@ function App() {
         </button>
       </div>
 
-      <ul>
+      <ul ref={runesListRef}>
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
-              <li key={rune}>
+              <li key={uuid()}>
                 <h5>
                   {(idx === 0 && 'overview') ||
                     (idx === 1 && 'challenge') ||

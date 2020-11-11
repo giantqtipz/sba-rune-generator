@@ -1,7 +1,7 @@
-import Fehu from './Fehu.png';
-import Uruz from './Uruz.png';
-import Thurisaz from './Thurisaz.png';
-import Ansuz from './Ansuz.png';
-import Raidho from './Raidho.png';
+import Gateway from './Gateway.png';
+import Journey from './Journey.png';
+import Possessions from './Possessions.png';
+import Signals from './Signals.png';
+import Strength from './Strength.png';
 
-export { Fehu, Uruz, Thurisaz, Ansuz, Raidho };
+export { Gateway, Journey, Possessions, Signals, Strength };
