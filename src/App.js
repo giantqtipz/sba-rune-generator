@@ -53,7 +53,7 @@ function App() {
     const runes = document.querySelectorAll('li');
     let timeout = 0;
     runes.forEach(rune => {
-      timeout = timeout + 125;
+      timeout = timeout + 100;
       setTimeout(() => {
         rune.classList.add('show');
       }, timeout);
@@ -65,7 +65,7 @@ function App() {
         behavior: "smooth",
       }
     );
-  }, [show, randomRunes]);
+  }, [show]);
   return (
     <div className="main">
       <div className="intro">
@@ -95,16 +95,19 @@ function App() {
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
-              <li key={uuid()}>
-                <h5>
-                  {(idx === 0 && 'action') ||
-                    (idx === 1 && 'challenge') ||
-                    (idx === 2 && 'overview')}
-                </h5>
-                <img src={rune.src} alt="rune" />
-                <h4>{rune.header}</h4>
-                <p>{rune.text}</p>
-              </li>
+              <>
+                <li key={uuid()}>
+                  <h5>
+                    {(idx === 0 && 'action') ||
+                      (idx === 1 && 'challenge') ||
+                      (idx === 2 && 'overview')}
+                  </h5>
+                  <img src={rune.src} alt="rune" />
+                  <h4>{rune.header}</h4>
+                  <p>{rune.text}</p>
+                </li>
+                <hr />
+              </>
             );
           })}
       </ul>
