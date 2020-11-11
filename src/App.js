@@ -65,6 +65,7 @@ function App() {
         behavior: "smooth",
       }
     );
+    show && showRunes();
   }, [show]);
   return (
     <div className="main">
@@ -89,7 +90,7 @@ function App() {
         </button>
       </div>
 
-      <ul ref={runesListRef}>
+      {show && <ul ref={runesListRef}>
         {randomRunes &&
           randomRunes.map((rune, idx) => {
             return (
@@ -108,7 +109,7 @@ function App() {
               </>
             );
           })}
-      </ul>
+      </ul>}
     </div>
   );
 }
