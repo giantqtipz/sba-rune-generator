@@ -15,7 +15,7 @@ import Opening from './Opening.svg';
 import Partnership from './Partnership.svg';
 import Possessions from './Possessions.svg';
 import Protection from './Protection.svg';
-import Logo from './SBALogo.svg';
+import Logo from './SBALogo.png';
 import Separation from './Separation.svg';
 import Signals from './Signals.svg';
 import Standstill from './Standstill.svg';

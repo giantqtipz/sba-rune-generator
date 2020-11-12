@@ -1,5 +1,4 @@
 body {
-  background-color: #E5E5E5;
   height: 100vh;
   margin: 0;
 }
@@ -29,6 +28,7 @@ body {
 }
 
 h2 {
+  color: #091C30;
   font-family: proxima-nova;
   font-size: 1.1rem;
   font-weight: bold;
@@ -65,6 +65,7 @@ hr {
 }
 
 p {
+  color: #091C30;
   font-family: proxima-nova;
   padding: 0 1rem;
   margin: 0;
@@ -72,6 +73,7 @@ p {
 }
 
 h4 {
+  color: #091C30;
   font-family: "Cormorant Garamond";
   font-size: 1.5rem;
   font-weight: normal;
@@ -79,6 +81,7 @@ h4 {
 }
 
 h5 {
+  color: #091C30;
   font-family: proxima-nova;
   font-size: .9rem;
   font-weight: bold;
