@@ -21,7 +21,6 @@ import {
   Standstill,
   Strength,
   TheSelf,
-  Unknowable,
   Warrior,
   Wholeness
 } from './imgs/index';
@@ -138,16 +137,11 @@ export const defaultRunes = [
     text: `Humankind, intelligence, thinking, planning. Expect to receive some sort of aid or cooperation now.`,
   },
   {
-    src: Unknowable,
-    header: `Unknownable`,
-    text: `Victory, justice, success, balance, sacrifice, fairness. Knowing where one's true strengths lie.`,
-  },
-  {
     src: Warrior,
     header: `Warrior`,
     text: `Victory, justice, success, balance, sacrifice, fairness. Knowing where one's true strengths lie.`,
   },
-  { // Sowilo Wholeness
+  {
     src: Wholeness,
     header: `Wholeness`,
     text: `The sin, life force, success, will and intent. A time when power will be available to you for positive changes in your life.`,

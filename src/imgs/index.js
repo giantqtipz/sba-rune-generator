@@ -21,7 +21,6 @@ import Signals from './Signals.svg';
 import Standstill from './Standstill.svg';
 import Strength from './Strength.svg';
 import TheSelf from './TheSelf.svg';
-import Unknowable from './Unknowable.svg';
 import Warrior from './Warrior.svg';
 import Wholeness from './Wholeness.svg';
 
@@ -49,7 +48,6 @@ export {
     Standstill,
     Strength,
     TheSelf,
-    Unknowable,
     Warrior,
     Wholeness
 };
